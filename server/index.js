@@ -12,7 +12,10 @@ const PORT = 8080;
 const app = express();
 const router = express.Router();
 
-app.use('/:id', (req, res) => {
+app.use('/:id', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Headers', "*");
+
   fs.readFile(path.resolve('./build/index.html'), 'utf8', (err, data) => {
     if (err) {
       console.error(err);
