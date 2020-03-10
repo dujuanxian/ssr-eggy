@@ -6,5 +6,5 @@ Todos:
 - [x] Render Styled box
 - [x] Get style from API
 - [x] Use webpack
-- [ ] Add prod support for webpack
+- [x] Add prod support for webpack
 - [ ] Use build-in html
