@@ -5014,11 +5014,6 @@ iferr@^0.1.5:
   resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
   integrity sha1-xg7taebY/bazEEofy8ocGS3FtQE=
 
-ignore-styles@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/ignore-styles/-/ignore-styles-5.0.1.tgz#b49ef2274bdafcd8a4880a966bfe38d1a0bf4671"
-  integrity sha1-tJ7yJ0va/NikiAqWa/440aC/RnE=
-
 ignore@^3.3.5:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
@@ -8385,6 +8380,11 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
+react-lib-adler32@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-lib-adler32/-/react-lib-adler32-1.0.3.tgz#63df1aed274eabcc1c5067077ea281ec30888ba7"
+  integrity sha512-AqFqdt4cP0RPffHNjVHZ7tyIgnoSzNxgFhG8XKMXCtA1dZ72gTPO4iYFwWDKHqvE8sHS14rhltQTdbXU5G4BFA==
+
 react-scripts@3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.4.0.tgz#f413680f0b5b937c8879ba1ffdae9b8c5b364bf5"
@@ -9562,6 +9562,13 @@ strip-json-comments@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.0.1.tgz#85713975a91fb87bf1b305cca77395e40d2a64a7"
   integrity sha512-VTyMAUfdm047mwKl+u79WIdrZxtFtn+nBxHeb844XBQ9uMNTuTHdx2hc5RiAJYqwTj3wc/xe5HLSdJSkJ+WfZw==
+
+style-it@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/style-it/-/style-it-2.1.4.tgz#bae8e73c69a9586a138a31fd3104182171b7149c"
+  integrity sha512-9eoEdUGD68XjvW/+BWo5Ir7d5+cXChcQMAuYHmgrHImz/jIfabxNj4pc+6DxVhxHnW92+ZzMVVUuxs4iTOXjsQ==
+  dependencies:
+    react-lib-adler32 "^1.0.3"
 
 style-loader@0.23.1:
   version "0.23.1"
