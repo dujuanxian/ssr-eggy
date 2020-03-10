@@ -12,8 +12,8 @@ function App(props) {
         `}
       </Style>
       {Style.it(`
+        ${props.style}
         .box {
-          background-color: indianred;
           width: 100px;
           height: 100px;
         }

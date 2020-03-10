@@ -4,6 +4,7 @@ import fs from 'fs';
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import fetch from 'node-fetch';
 
 import App from '../src/App'
 
@@ -18,12 +19,20 @@ app.use('/:id', (req, res) => {
       return res.status(500).send('An error occurred');
     }
 
-    return res.send(
-      data.replace(
-        '<div id="root"></div>',
-        `<div id="root">${ReactDOMServer.renderToString(<App/>)}</div>`
-      )
-    );
+    const CONTACT_URL = `https://my-json-server.typicode.com/dujuanxian/contacts-api/css/${req.params.id}`;
+    fetch(CONTACT_URL)
+      .then(res =>  res.json())
+      .then(body => {
+        return res.send(
+          data.replace(
+            '<div id="root"></div>',
+            `<div id="root">
+              ${ReactDOMServer.renderToString(<App style={body.result}/>)}
+             </div>
+            `
+          )
+        )
+      });
   });
 });
 
