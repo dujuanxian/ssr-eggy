@@ -22,15 +22,15 @@ app.use('/:id', (req, res, next) => {
       return res.status(500).send('An error occurred');
     }
 
-    const CONTACT_URL = `https://my-json-server.typicode.com/dujuanxian/contacts-api/css/${req.params.id}`;
+    const CONTACT_URL = `https://my-json-server.typicode.com/dujuanxian/contacts-api/answers/${req.params.id}`;
     fetch(CONTACT_URL)
       .then(res =>  res.json())
-      .then(body => {
+      .then(answer => {
         return res.send(
           data.replace(
             '<div id="root"></div>',
             `<div id="root">
-              ${ReactDOMServer.renderToString(<App style={body.result}/>)}
+              ${ReactDOMServer.renderToString(<App answer={answer}/>)}
              </div>
             `
           )

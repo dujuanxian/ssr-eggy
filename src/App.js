@@ -2,6 +2,7 @@ import React from 'react';
 import Style from 'style-it';
 
 function App(props) {
+  const { result, baseStyle } = props.answer;
   return (
     <>
       <Style>
@@ -12,11 +13,8 @@ function App(props) {
         `}
       </Style>
       {Style.it(`
-        ${props.style}
-        .box {
-          width: 100px;
-          height: 100px;
-        }
+        ${result}
+        ${baseStyle}
       `,
         <div className="box"/>
       )}
